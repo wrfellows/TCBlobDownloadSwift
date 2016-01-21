@@ -91,6 +91,7 @@ public class TCBlobDownload {
         :see: `NSURLSessionDownloadTask -suspend`
     */
     public func suspend() {
+        print(delegate)
         self.downloadTask.suspend()
         print(delegate)
     }
@@ -101,8 +102,9 @@ public class TCBlobDownload {
         :see: `NSURLSessionDownloadTask -resume`
     */
     public func resume(delegate: TCBlobDownloadDelegate?) {
-        self.downloadTask.resume()
         self.delegate = delegate
+        print(delegate)
+        self.downloadTask.resume()
         print(delegate)
     }
 
