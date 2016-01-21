@@ -16,7 +16,7 @@ public class TCBlobDownload {
     public let downloadTask: NSURLSessionDownloadTask
 
     /// An optional delegate to get notified of events.
-    weak var delegate: TCBlobDownloadDelegate?
+    var delegate: TCBlobDownloadDelegate?
 
     /// An optional progression closure periodically executed when a chunk of data has been received.
     var progression: progressionHandler
