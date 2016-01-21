@@ -101,13 +101,14 @@ public class TCBlobDownload {
     
         :see: `NSURLSessionDownloadTask -resume`
     */
-    public func resume(delegate: TCBlobDownloadDelegate?) {
-        self.delegate = delegate
-        print(delegate)
+    public func resume() {
+        
         self.downloadTask.resume()
-        print(delegate)
-    }
 
+    }
+    public func setDelegate(delegate: TCBlobDownloadDelegate?){
+        self.delegate = delegate
+    }
     /**
         Cancel a download and produce resume data. If stored, this data can allow resuming the download at its previous state.
 
