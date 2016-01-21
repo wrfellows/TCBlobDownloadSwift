@@ -101,8 +101,8 @@ public class TCBlobDownload {
     
         :see: `NSURLSessionDownloadTask -resume`
     */
-    public func resume() {
-        
+    public func resume(delegate: TCBlobDownloadDelegate?) {
+        self.delegate = delegate
         self.downloadTask.resume()
 
     }
